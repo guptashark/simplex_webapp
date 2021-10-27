@@ -1,7 +1,8 @@
 import flask
 from flask import Blueprint, render_template
 
-simplex_app = Blueprint("simplex_app", __name__, template_folder='templates')
+simplex_app = Blueprint("simplex_app", __name__,
+  template_folder='templates', static_folder='static')
 
 @simplex_app.route("/", methods=["GET"])
 def hello():
